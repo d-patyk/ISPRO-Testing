@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 jobs:
-  build:
+  build_ubuntu:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -22,7 +22,7 @@ jobs:
       - name: Test with unittest
         run: |
           python -m unittest vector.py
-  build2:
+  build_windows:
     runs-on: windows-latest
     strategy:
       matrix:
