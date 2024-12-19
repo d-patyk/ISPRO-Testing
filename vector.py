@@ -51,3 +51,20 @@ class VectorTestCase(unittest.TestCase):
     def test_length2_3(self):
         v = Vector(-1, -10)
         self.assertEqual(v.length2(), ((-1) * (-1) + (-10) * (-10)))
+    
+
+    def test_eq_true(self):
+        v1, v2 = Vector(3, 4), Vector(3, 4)
+        self.assertTrue(v1 == v2)
+
+    def test_eq_false1(self):
+        v1, v2 = Vector(3, 4), Vector(3, 5)
+        self.assertFalse(v1 == v2)
+    
+    def test_eq_false2(self):
+        v1, v2 = Vector(-1, -1), Vector(1, 1)
+        self.assertFalse(v1 == v2)
+
+    def test_eq_false3(self):
+        v1, v2 = Vector(1, 1), Vector(2, 1)
+        self.assertFalse(v1 == v2)
