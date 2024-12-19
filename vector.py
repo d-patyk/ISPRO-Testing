@@ -42,7 +42,7 @@ class VectorTestCase(unittest.TestCase):
 
     def test_length2_1(self):
         v = Vector(3, 4)
-        self.assertEqual(v.length2(), (3 * 3 + 4 * 5))
+        self.assertEqual(v.length2(), (3 * 3 + 4 * 4))
     
     def test_length2_2(self):
         v = Vector(10, 12)
